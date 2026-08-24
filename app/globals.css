@@ -1,0 +1,104 @@
+:root{
+  --paper:#FBF5F2; --blush:#F3E1DA; --nude:#E7CFC4;
+  --rose:#C98F7E; --mauve:#7A544B; --ink:#463430;
+  --line:rgba(122,84,75,.18);
+  --wrap:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:var(--font-body),sans-serif; font-weight:300; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--rose)}
+
+/* buttons */
+.btn{display:inline-block;font-family:var(--font-body),sans-serif;font-weight:400;font-size:13px;
+  letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
+  padding:14px 30px;border-radius:40px;transition:background .2s,color .2s,border-color .2s;}
+.btn-solid{background:var(--mauve);color:var(--paper)}
+.btn-solid:hover{background:var(--ink)}
+.btn-ghost{border:1px solid var(--line);color:var(--mauve)}
+.btn-ghost:hover{border-color:var(--mauve)}
+.btn:focus-visible{outline:2px solid var(--mauve);outline-offset:3px}
+.almond{display:block;margin:0 auto}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(251,245,242,.86);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brandmini{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.brandmini .s{font-family:var(--font-script),cursive;font-size:26px;color:var(--mauve)}
+.brandmini .u{font-family:var(--font-body),sans-serif;font-size:7.5px;letter-spacing:.34em;color:var(--mauve);opacity:.8;margin-top:2px}
+nav.links{display:flex;gap:32px}
+nav.links a{font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--mauve);opacity:.8}
+nav.links a:hover{opacity:1}
+.bar .book{margin-left:24px}
+@media(max-width:720px){nav.links{display:none}}
+
+/* hero */
+.hero{text-align:center;padding:96px 24px 80px}
+.hero .script{font-family:var(--font-script),cursive;font-size:clamp(72px,16vw,132px);color:var(--mauve);line-height:.9}
+.hero .rule{width:min(300px,62%);height:1px;background:var(--rose);margin:14px auto 16px}
+.hero .svc{font-family:var(--font-body),sans-serif;font-weight:400;font-size:clamp(15px,4vw,22px);letter-spacing:.5em;color:var(--mauve);padding-left:.5em}
+.hero .loc{font-size:11px;letter-spacing:.42em;color:var(--rose);margin-top:14px}
+.hero .tag{font-family:var(--font-display),serif;font-weight:300;font-size:clamp(19px,3.4vw,25px);color:var(--ink);max-width:520px;margin:34px auto 0;line-height:1.5}
+.hero .cta{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* sections */
+.section{padding:76px 0}
+.divider{display:flex;align-items:center;gap:20px;justify-content:center;opacity:.9}
+.divider span{height:1px;width:64px;background:var(--line)}
+.sechead{text-align:center;margin-bottom:12px}
+.sechead h2{font-family:var(--font-display),serif;font-weight:400;font-size:clamp(30px,5vw,42px);color:var(--mauve);margin-top:10px}
+
+/* about */
+.about{text-align:center}
+.about p{font-family:var(--font-display),serif;font-size:clamp(19px,2.6vw,23px);font-weight:300;line-height:1.7;max-width:640px;margin:0 auto;color:var(--ink)}
+.about .sign{font-family:var(--font-script),cursive;font-size:38px;color:var(--rose);margin-top:24px}
+
+/* services */
+.svcbg{background:linear-gradient(180deg,var(--paper),var(--blush))}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:56px;max-width:900px;margin:44px auto 0}
+@media(max-width:720px){.menu{grid-template-columns:1fr;gap:44px}}
+.menu h3{font-family:var(--font-display),serif;font-weight:500;font-size:24px;color:var(--mauve);text-align:center;margin-bottom:6px}
+.menu .cat-sub{text-align:center;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin-bottom:22px}
+.row{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .name{font-size:15px;color:var(--ink)}
+.row .name small{display:block;font-size:12px;opacity:.6;letter-spacing:.02em}
+.row .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
+.row .price{font-family:var(--font-display),serif;font-size:19px;color:var(--mauve);white-space:nowrap}
+.menu-note{text-align:center;font-size:12px;color:var(--ink);opacity:.55;margin-top:30px;letter-spacing:.02em}
+
+/* gallery */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+@media(max-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}
+.tile{aspect-ratio:1/1;border-radius:12px;overflow:hidden;
+  background:linear-gradient(150deg,var(--blush),var(--nude));
+  display:flex;align-items:center;justify-content:center}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.tile .ph{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--mauve);opacity:.65}
+.gallery-cta{text-align:center;margin-top:32px}
+.gallery-cta a{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mauve);text-decoration:none;border-bottom:1px solid var(--rose);padding-bottom:3px}
+
+/* booking band */
+.band{background:var(--mauve);color:var(--paper);text-align:center;padding:74px 24px}
+.band .script{font-family:var(--font-script),cursive;font-size:clamp(40px,8vw,58px);line-height:1}
+.band p{max-width:440px;margin:16px auto 0;font-size:15px;opacity:.9;line-height:1.7}
+.band .btn-solid{background:var(--paper);color:var(--mauve);margin-top:30px}
+.band .btn-solid:hover{background:#fff}
+.band .meta{margin-top:26px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;opacity:.7}
+
+/* footer */
+footer.site{padding:60px 24px 48px;text-align:center}
+.foot-grid{display:flex;gap:48px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+.foot-col .lbl{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin-bottom:8px}
+.foot-col a,.foot-col p{font-size:14px;color:var(--ink);text-decoration:none;line-height:1.7}
+.foot-col a:hover{color:var(--mauve)}
+.foot-brand{font-family:var(--font-script),cursive;font-size:34px;color:var(--mauve)}
+.foot-fine{font-size:11px;letter-spacing:.08em;color:var(--ink);opacity:.5;margin-top:10px;line-height:1.8}
