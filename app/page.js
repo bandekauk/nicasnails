@@ -12,12 +12,13 @@ export default function Page() {
       <Header />
       <main id="top">
         <Hero />
+		<Gallery />
         <About />
         <Services />
-        <Gallery />
         <BookingBand />
       </main>
       <Footer />
     </>
   );
 }
+
