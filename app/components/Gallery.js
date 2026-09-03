@@ -19,7 +19,6 @@ export default function Gallery() {
       <div className="wrap">
         <div className="sechead">
           <span className="eyebrow">Recent work</span>
-          <h2>The Gallery</h2>
         </div>
         <div className="grid">{tiles}</div>
         <div className="gallery-cta">
