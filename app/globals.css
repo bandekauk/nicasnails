@@ -40,8 +40,10 @@ nav.links a:hover{opacity:1}
 .bar .book{margin-left:24px}
 @media(max-width:720px){nav.links{display:none}}
 
+
+
 /* hero */
-.hero{text-align:center;padding:96px 24px 80px}
+.hero{text-align:center;padding:96px 24px 32px}
 .hero .script{font-family:var(--font-script),cursive;font-size:clamp(72px,16vw,132px);color:var(--mauve);line-height:.9}
 .hero .rule{width:min(300px,62%);height:1px;background:var(--rose);margin:14px auto 16px}
 .hero .svc{font-family:var(--font-body),sans-serif;font-weight:400;font-size:clamp(15px,4vw,22px);letter-spacing:.5em;color:var(--mauve);padding-left:.5em}

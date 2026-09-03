@@ -15,12 +15,9 @@ export default function Gallery() {
       ));
 
   return (
-    <section className="section" id="gallery">
+    <section className="section" id="gallery" style={{ paddingTop: 0 }}>
       <div className="wrap">
-        <div className="sechead">
-          <span className="eyebrow">Recent work</span>
-        </div>
-        <div className="grid">{tiles}</div>
+        <div className="grid" style={{ marginTop: 0 }}>{tiles}</div>
         <div className="gallery-cta">
           <a href={site.instagramUrl} target="_blank" rel="noopener">
             Follow on Instagram {site.instagramHandle}
